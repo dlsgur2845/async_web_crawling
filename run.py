@@ -17,6 +17,7 @@ from workClasses import ManagerInfo
 import worksConf
 from thefuzz import process
 from chromeCrawling import get_chrome_driver
+import subprocess
 
 
 que = None
@@ -96,6 +97,8 @@ def input_from_user(q):
 
 def main():
     global que, event
+
+    subprocess.call(["cmd", "/c", "mkdir logs"])
 
     print("업무명과 사용자 정보를 입력해주세요.\n"
           + "예시)\n"
